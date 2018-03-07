@@ -1,0 +1,44 @@
+C:\xampp\apache\conf\extra\httpd-vhosts ->
+
+<VirtualHost *:80>
+	DocumentRoot "C:/xampp/htdocs"
+	ServerName localhost
+</VirtualHost>
+
+<VirtualHost *:80>
+	DocumentRoot "C:/xampp/htdocs/laravel5/public"
+	ServerName newe.dev
+</VirtualHost>
+
+
+2. C:\Windows\System32\drivers\etc ->
+
+127.0.0.1 		newe.dev
+
+3.
+
+install https://nodejs.org/en/  -> cmd open write cd c:/xampp/htdocs/laravel5 -> npm install
+
+
+php artisan make:auth
+php artisan make:migration create_admins_table --create=admins
+php artisan migrate ->> databaseruu table uusgeh zoriulalttai
+php artisan route:list -> list harh
+
+AdmIN UUSGEH ---->
+λ php artisan tinker
+Psy Shell v0.8.2 (PHP 5.6.25 ΓÇö cli) by Justin Hileman
+New version is available (current: v0.8.2, latest: v0.8.15)
+>>>
+>>> $admin = new App\Admin
+=> App\Admin {#670}
+>>> $admin->name = "Newe"
+=> "Newe"
+>>> $admin->email = "t.sh1nee@yahoo.com"
+=> "t.sh1nee@yahoo.com"
+>>> $admin->password = Hash::make('password')
+=> "$2y$10$mOp4KNV/W4qo2X.7hdbnSu7FMX7.u6uJ/buA7bAGIYazqq6lzaIfC"
+>>> $admin->job_title = "Admin"
+=> "Admin"
+>>> $admin->save()
+=> true
